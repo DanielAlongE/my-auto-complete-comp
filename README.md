@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Getting Started with AsyncAutoCompleteSelect
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -14,33 +14,35 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Sample
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```js
+const rainbowOptions = [
+  { label: "Red", value: "red" },
+  { label: "Orange", value: "orange" },
+  { label: "Yellow", value: "yellow" },
+  { label: "Green", value: "green" },
+  { label: "Blue", value: "blue" },
+  { label: "Indigo", value: "indigo" },
+  { label: "Violet", value: "violet" },
+];
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+const MyComp = () => <AutoCompleteSelect
+        id="single-select"
+        label="Single select option"
+        placeholder="Pick your favourite Rainbow color"
+        options={rainbowOptions}
+        onSelect={console.log}
+      />
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+<img width="452" alt="image" src="https://github.com/DanielAlongE/my-auto-complete-comp/assets/10385516/7345cf54-a0de-499c-9be4-f0e5da44001f">
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<img width="443" alt="image" src="https://github.com/DanielAlongE/my-auto-complete-comp/assets/10385516/19812e58-e959-4a9b-be6f-cde6dee169e7">
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<img width="436" alt="image" src="https://github.com/DanielAlongE/my-auto-complete-comp/assets/10385516/8d8a6ffa-418a-48b4-9e50-351615f7f6d5">
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
